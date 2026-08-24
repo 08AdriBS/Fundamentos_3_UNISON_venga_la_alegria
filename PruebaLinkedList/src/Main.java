@@ -21,6 +21,8 @@ public class Main {
         lista.add("Obet mednes", 39);
         lista.add("Ciret deshidratado", 1000);
         lista.add("Duego alberno", 2);
+
+        lista.print();
     }
 }
 
@@ -42,5 +44,14 @@ class LnkdLst {
             current = current.next;
         }
         current.next = newStudent;
+    }
+
+    public void print() {
+        Student current = this.head;
+        while(current != null) {
+            System.out.println(current.name + ": " + current.score);
+            current = current.next;
+        }
+        System.out.println("Ya se acabó la lista w");
     }
 }
